@@ -106,3 +106,22 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 });
+
+function scaleUp(image) {
+            const card = button.parentElement;
+            const image = card.querySelector('img');
+
+            const fullscreenContainer = document.getElementById('fullscreen-container');
+            fullscreenContainer.innerHTML = `
+                <div class="scale-fullscreen" onclick="closeFullscreen()">
+                    <img src="${image.src}" alt="${image.alt}" class="rounded-lg">
+                </div>
+            `;
+            fullscreenContainer.classList.remove('hidden');
+        }
+
+        function closeFullscreen() {
+            const fullscreenContainer = document.getElementById('fullscreen-container');
+            fullscreenContainer.classList.add('hidden');
+            fullscreenContainer.innerHTML = '';
+}
