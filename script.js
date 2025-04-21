@@ -107,7 +107,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
-function scaleUp(image) {
+function scaleUp(img) {
             const card = button.parentElement;
             const image = card.querySelector('img');
 
