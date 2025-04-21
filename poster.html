@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>POSTER SISWA/I</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <div class="container">
+        <h1>POSTER SISWA/I</h1>
+        <p>Ini adalah halaman untuk menampilkan poster siswa/i.</p>
+        <table class="photo-table">
+            <tr>
+                <td class="photo-slot"><img src="foto/rapa (1).jpg" alt="Poster 1" class="clickable-photo" /></td>
+                <td class="photo-slot"><img src="foto/poster2.jpg" alt="Poster 2" class="clickable-photo" /></td>
+                <td class="photo-slot"><img src="foto/poster3.jpg" alt="Poster 3" class="clickable-photo" /></td>
+                <td class="photo-slot"><img src="foto/poster4.jpg" alt="Poster 4" class="clickable-photo" /></td>
+            </tr>
+            <tr>
+                <td class="photo-slot"><img src="foto/poster5.jpg" alt="Poster 5" class="clickable-photo" /></td>
+                <td class="photo-slot"><img src="foto/poster6.jpg" alt="Poster 6" class="clickable-photo" /></td>
+                <td class="photo-slot"><img src="foto/poster7.jpg" alt="Poster 7" class="clickable-photo" /></td>
+                <td class="photo-slot"><img src="foto/poster8.jpg" alt="Poster 8" class="clickable-photo" /></td>
+            </tr>
+        </table>
+        <a href="halaman_berikutnya.html" class="nav-button">Kembali</a>
+    </div>
+
+    <!-- Modal for enlarged photo -->
+    <div id="photoModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="modalImage" />
+        <div id="caption"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

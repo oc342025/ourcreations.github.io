@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>GAMBAR SISWA/I</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <div class="container">
+        <h1>GAMBAR SISWA/I</h1>
+        <p>Ini adalah halaman untuk menampilkan gambar siswa/i.</p>
+        <table class="photo-table">
+            <tr>
+                <td class="photo-slot"><img src="foto/kalip.jpg" alt="Foto 1" class="clickable-photo" /></td>
+                <td class="photo-slot"><img src="foto/sabrina.jpg" alt="Foto 2" class="clickable-photo" /></td>
+                <td class="photo-slot"><img src="foto/uki.jpg" alt="Foto 3" class="clickable-photo" /></td>
+                <td class="photo-slot"><img src="foto/sample4.jpg" alt="Foto 4" class="clickable-photo" /></td>
+            </tr>
+            <tr>
+                <td class="photo-slot"><img src="foto/sample5.jpg" alt="Foto 5" class="clickable-photo" /></td>
+                <td class="photo-slot"><img src="foto/sample6.jpg" alt="Foto 6" class="clickable-photo" /></td>
+                <td class="photo-slot"><img src="foto/sample7.jpg" alt="Foto 7" class="clickable-photo" /></td>
+                <td class="photo-slot"><img src="foto/sample8.jpg" alt="Foto 8" class="clickable-photo" /></td>
+            </tr>
+        </table>
+        <a href="halaman_berikutnya.html" class="nav-button">Kembali</a>
+    </div>
+
+    <!-- Modal for enlarged photo -->
+    <div id="photoModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="modalImage" />
+        <div id="caption"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

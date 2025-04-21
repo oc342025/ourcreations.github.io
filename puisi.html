@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>PUISI SISWA/I</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+        .poem-bar {
+            background-color: rgba(255, 255, 255, 0.15);
+            color: #f0f0f0;
+            padding: 12px 20px;
+            margin: 10px 0;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+            user-select: none;
+            transition: background-color 0.3s ease;
+        }
+        .poem-bar:hover {
+            background-color: rgba(255, 255, 255, 0.35);
+        }
+        .poem-content {
+            display: none;
+            background-color: rgba(0,0,0,0.4);
+            padding: 15px 20px;
+            border-radius: 8px;
+            margin-bottom: 10px;
+            white-space: pre-wrap;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+            line-height: 1.5;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>PUISI SISWA/I</h1>
+        <p>Ini adalah halaman untuk menampilkan puisi siswa/i.</p>
+
+        <div class="poem-bar" tabindex="0">Puisi lintang (klik untuk lihat selengkapnya)</div>
+        <div class="poem-content">Seperti Siang yang mengalah demi Malam
+dan Api yang padam karna adanya Air
+Terkadang Kita harus merelakan yang pergi
+dan kita harus merelakan yang hilang
+Kita harus menerima keadaan
+tanpa harus menyalahkan kenyataan
+Tapi hidup bukan hanya menunggu dan merelakan
+Tapi hidup juga harus tenang merubah keadaan
+dan melawan kenyataan
+Boleh jadi kamu membenci sesuatu padahal itu baik bagimu
+dan boleh jadi kamu menyukai sesuatu padahal itu buruk bagimu
+
+-Lintang_Casey</div>
+
+        <div class="poem-bar" tabindex="0">Puisi 2 (klik untuk lihat selengkapnya)</div>
+        <div class="poem-content">Ini adalah isi lengkap puisi nomor 2. Baris pertama puisi.
+Baris kedua puisi.
+Baris ketiga puisi.</div>
+
+        <div class="poem-bar" tabindex="0">Puisi 3 (klik untuk lihat selengkapnya)</div>
+        <div class="poem-content">Ini adalah isi lengkap puisi nomor 3. Baris pertama puisi.
+Baris kedua puisi.
+Baris ketiga puisi.</div>
+
+        <div class="poem-bar" tabindex="0">Puisi 4 (klik untuk lihat selengkapnya)</div>
+        <div class="poem-content">Ini adalah isi lengkap puisi nomor 4. Baris pertama puisi.
+Baris kedua puisi.
+Baris ketiga puisi.</div>
+
+        <a href="halaman_berikutnya.html" class="nav-button">Kembali</a>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const bars = document.querySelectorAll('.poem-bar');
+            bars.forEach((bar, index) => {
+                bar.addEventListener('click', () => {
+                    const content = bar.nextElementSibling;
+                    if (content.style.display === 'block') {
+                        content.style.display = 'none';
+                    } else {
+                        content.style.display = 'block';
+                    }
+                });
+                bar.addEventListener('keypress', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                        e.preventDefault();
+                        bar.click();
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

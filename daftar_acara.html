@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Daftar Acara</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      background: linear-gradient(135deg, #a8dadc, #457b9d);
+      background-attachment: fixed;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: #f0f0f0;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      background-color: rgba(0, 0, 0, 0.5);
+      margin: 30px auto;
+      padding: 20px;
+      border-radius: 12px;
+      max-width: 960px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.7);
+    }
+    .event-gallery {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+      margin-top: 20px;
+    }
+    .event-item {
+      width: 250px;
+      background-color: rgba(255, 255, 255, 0.15);
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+      overflow: hidden;
+      text-align: center;
+      color: #f0f0f0;
+      padding-bottom: 10px;
+    }
+    .event-item img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-bottom: 1px solid rgba(255,255,255,0.3);
+    }
+    .event-bar {
+      background-color: rgba(255, 255, 255, 0.15);
+      color: #f0f0f0;
+      padding: 10px 15px;
+      cursor: pointer;
+      font-weight: 600;
+      border-radius: 0 0 8px 8px;
+      user-select: none;
+      transition: background-color 0.3s ease;
+    }
+    .event-bar:hover {
+      background-color: rgba(255, 255, 255, 0.35);
+    }
+    .event-description {
+      display: none;
+      padding: 10px 15px;
+      font-size: 0.95rem;
+      line-height: 1.4;
+      background-color: rgba(0,0,0,0.4);
+      border-radius: 0 0 8px 8px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+      margin-top: -8px;
+      text-align: left;
+    }
+    .nav-button {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 10px 20px;
+      background-color: #444;
+      color: #f0f0f0;
+      text-decoration: none;
+      border-radius: 6px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.4);
+      transition: background-color 0.3s ease;
+    }
+    .nav-button:hover {
+      background-color: #666;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Daftar Acara</h1>
+    <div class="event-gallery">
+      <div class="event-item">
+        <img src="foto/Postevent.png" alt="Acara 1" />
+        <div class="event-bar" tabindex="0">Lihat Deskripsi Acara</div>
+        <div class="event-description">lomba event .</div>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSedWkDRDGHuRzBIbW_uaROw_WMROkMx9thQMPACu8caQ6D5IA/viewform?usp=header" target="_blank" class="nav-button">Daftar</a>
+      </div>
+      <div class="event-item">
+        <img src="foto/event2.jpg" alt="Acara 2" />
+        <div class="event-bar" tabindex="0">Lihat Deskripsi Acara 2</div>
+        <div class="event-description">Lomba musik akustik antar kelas.</div>
+        <a href="isi format link" target="_blank" class="nav-button">Daftar</a>
+      </div>
+      <div class="event-item">
+        <img src="foto/event3.jpg" alt="Acara 3" />
+        <div class="event-bar" tabindex="0">Lihat Deskripsi Acara 3</div>
+        <div class="event-description">Pameran karya seni lukis dan kerajinan tangan.</div>
+        <a href="isi format link" target="_blank" class="nav-button">Daftar</a>
+      </div>
+      <div class="event-item">
+        <img src="foto/event4.jpg" alt="Acara 4" />
+        <div class="event-bar" tabindex="0">Lihat Deskripsi Acara 4</div>
+        <div class="event-description">Pertunjukan drama dan teater oleh siswa/i.</div>
+        <a href="isi format lnk" target="_blank" class="nav-button">Daftar</a>
+      </div>
+    </div>
+    <a href="halaman_berikutnya.html" class="nav-button">Kembali ke Menu Utama</a>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const bars = document.querySelectorAll('.event-bar');
+      bars.forEach((bar) => {
+        bar.addEventListener('click', () => {
+          const desc = bar.nextElementSibling;
+          if (desc.style.display === 'block') {
+            desc.style.display = 'none';
+          } else {
+            desc.style.display = 'block';
+          }
+        });
+        bar.addEventListener('keypress', (e) => {
+          if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            bar.click();
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>
